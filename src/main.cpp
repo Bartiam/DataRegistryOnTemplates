@@ -1,4 +1,4 @@
-#include "Data.h"
+﻿#include "Data.h"
 
 template<typename T1, typename T2>
 void command_processing(std::string& command, Registry<T1, T2>& firstTest)

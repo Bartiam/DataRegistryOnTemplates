@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
@@ -7,7 +7,7 @@ template<typename T1, typename T2>
 class Registry
 {
 private:
-	// Вложенная структура данных;
+	// Р’Р»РѕР¶РµРЅРЅР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С…;
 	struct Data
 	{
 		T1 key;
@@ -20,13 +20,13 @@ private:
 	};
 	std::vector<Data> datas;
 public:
-	// Прототип метода добавляющего объект Data;
+	// РџСЂРѕС‚РѕС‚РёРї РјРµС‚РѕРґР° РґРѕР±Р°РІР»СЏСЋС‰РµРіРѕ РѕР±СЉРµРєС‚ Data;
 	void add(const T1& key, const T2& value)
 	{
 		Data temp(key, value);
 		datas.emplace_back(temp);
 	}
-	// Метод удаляющих все элементы с заданым ключом;
+	// РњРµС‚РѕРґ СѓРґР°Р»СЏСЋС‰РёС… РІСЃРµ СЌР»РµРјРµРЅС‚С‹ СЃ Р·Р°РґР°РЅС‹Рј РєР»СЋС‡РѕРј;
 	void remove(const T1& key)
 	{
 		for (auto it = datas.begin(); it != datas.end();)
@@ -39,14 +39,14 @@ public:
 			else ++it;
 		}
 	}
-	// Метод поиска объекта;
+	// РњРµС‚РѕРґ РїРѕРёСЃРєР° РѕР±СЉРµРєС‚Р°;
 	void find(const T1& key)
 	{
 		for (auto it = datas.begin(); it != datas.end(); ++it)
 			if (it->key == key)
 				std::cout << it->key << " " << it->value << std::endl;
 	}
-	// Метод выводящий всю информацию в консоль;
+	// РњРµС‚РѕРґ РІС‹РІРѕРґСЏС‰РёР№ РІСЃСЋ РёРЅС„РѕСЂРјР°С†РёСЋ РІ РєРѕРЅСЃРѕР»СЊ;
 	void print()
 	{
 		for (int i = 0; i < datas.size(); ++i)
